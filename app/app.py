@@ -54,7 +54,7 @@ def getCommentsAboutCorona(allComments, topic):
       if keyword in comment:
         cmt = comment.replace("\n", "").replace("\r", "")
         print(f"\n[댓글 수집]'{topic}' 관련 기사 중 '{keyword}' 관련 댓글을 수집합니다.\n{cmt}")
-        result.append([cmt, keyword])
+        result.append([keyword, cmt])
         break
 
   return result
@@ -136,8 +136,8 @@ for url in urls:
               #   # 3페이지까지 탐색했는데 '기독교' 관련 댓글이 없으면, 이후로도 없을 것으로 판단하여 다음 게시글을 탐색하도록 합니다.
               #   break
               for foundComment in foundComments:
-                commentsInSamePost.append([year, month, keyword] + [foundComment])
-
+                commentsInSamePost.append([year, month, keyword, *foundComment])
+            
             comments += commentsInSamePost
             # 브라우저 뒤로가기
             back(year, month, day, i)
