@@ -100,10 +100,11 @@ for url in urls:
 
     # '코로나' 혹은 '오미크론' 이 포함된 기사 추출
     searching_keywords = ['코로나', '오미크론']
+    news_title = title.text
     for keyword in searching_keywords:
-        if keyword in title.text:
+        if keyword in news_title:
             # keyword가 포함된 뉴스를 클릭하여 이동
-            print(f"\n[기사 클릭]'{keyword}' 관련 뉴스 기사({year}.{month}.{day}주차 / {i}랭킹)를 클릭합니다.\n{title.text}")
+            print(f"\n[기사 클릭]'{keyword}' 관련 뉴스 기사({year}.{month}.{day}주차 / {i}랭킹)를 클릭합니다.\n{news_title}")
             try:
               title.click()
               wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, f'#articleView')))
@@ -136,7 +137,7 @@ for url in urls:
               #   # 3페이지까지 탐색했는데 '기독교' 관련 댓글이 없으면, 이후로도 없을 것으로 판단하여 다음 게시글을 탐색하도록 합니다.
               #   break
               for foundComment in foundComments:
-                commentsInSamePost.append([year, month, keyword, *foundComment])
+                commentsInSamePost.append([year, month, day, keyword, news_title, *foundComment, url])
             
             comments += commentsInSamePost
             # 브라우저 뒤로가기
@@ -147,7 +148,7 @@ for url in urls:
 
 browser.quit()
 
-df = pd.DataFrame(comments, columns=['년도', '월', '주제 키워드', '댓글 키워드', '댓글']) # index=['댓글'], 
+df = pd.DataFrame(comments, columns=['년도', '월', '일(의 주차)', '기사 키워드', '기사 제목', '댓글 키워드', '댓글', 'URL']) # index=['댓글'], 
 print(df)
 
 # 엑셀 파일 저장
