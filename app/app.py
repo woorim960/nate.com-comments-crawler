@@ -24,7 +24,6 @@ print()
 
 # 데이터 수집 시작
 urls = Init.getUrls([SEARCHING_START_YEAR, SEARCHING_LAST_YEAR, SEARCHING_START_MONTH, SEARCHING_LAST_MONTH])
-# urls = ["https://news.nate.com/rank/cmt?sc=&p=week&date=20220401"]
 comments = []
 for url in urls:
   date = url.split("=")[-1]
