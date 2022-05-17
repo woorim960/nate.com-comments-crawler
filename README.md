@@ -39,7 +39,7 @@
     ```
 
 ## 실행
-> 주의 : 먼저, [설치](https://github.com/woorim960/nate.com-comments-crawler#설치로컬)를 통해 hango-raspberry-pi를 설치해주십시오.    
+> 주의 : 먼저, [설치](https://github.com/woorim960/nate.com-comments-crawler#설치로컬)를 통해 ```nate.com-comments-crawler``` 소스 코드를 설치해주십시오.    
 > 주의 : 아래 명령은 ```nate.com-comments-crawler```의 [requirements.txt](https://github.com/woorim960/nate.com-comments-crawler/blob/master/requirements.txt) 파일이 있는 루트 경로에서 실행되어야 합니다.
 
 1. 프로그램 실행에 필요한 ```패키지``` 설치하기
