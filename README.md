@@ -10,7 +10,7 @@
 * [Ubuntu OS에서 pip 설치](https://phoenixnap.com/kb/how-to-install-pip-on-ubuntu)
 
 1. pip 설치
-    > 만약, 아래 명령대로 설치가 되지 않는다면 위 링크를 참고해주세요.
+    * 만약, 아래 명령대로 설치가 되지 않는다면 위 링크를 참고해주세요.
     ```
     # Max OS or Windows OS
     $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
