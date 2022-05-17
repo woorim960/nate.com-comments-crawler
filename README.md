@@ -56,7 +56,7 @@
     $ python3 app.py
     ```
 
-## 실행 사진 & 비디오
+## 실행 사진
 * 프로그램 시작 화면
   <img width="1440" alt="스크린샷 2022-05-17 오후 11 53 59" src="https://user-images.githubusercontent.com/56839474/168842159-c7ea065d-0efb-48cc-ada7-e5af4b9ff0ef.png">
 
