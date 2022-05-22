@@ -73,9 +73,11 @@ for url in urls:
               Init.back(browser, year, month, day, i)
               break
 
-            commentsInSamePost = []
+            commentsInSamePost = [] # 한 게시판의 댓글들이 수집될 변수
+            # 한 게시판의 댓글 중 START_PAGE부터 LAST_PAGE까지 수집한다.
             for commentPage in range(COMMENT_SERACHING_START_PAGE, COMMENT_SERACHING_LAST_PAGE + 1):
               try:
+                # 댓글 수집 용 URL 접속
                 requestUrl = f"https://comm.news.nate.com/Comment/ArticleComment/List?artc_sq={artc_sq}&order=&cmtr_fl=0&prebest=0&clean_idx=&user_nm=&fold=&mid=n1006&domain=&argList=0&best=1&return_sq=&connectAuth=N&page={commentPage}#comment"
                 print(f"\n{commentPage} 페이지의 댓글을 탐색합니다.")
               except:
