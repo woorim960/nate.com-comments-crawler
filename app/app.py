@@ -107,6 +107,8 @@ for url in urls:
         
     print(".", end="")
 
+
+# 브라우저 동적 탐색 종료 (셀레니움 종료)
 browser.quit()
 
 df = pd.DataFrame(comments, columns=['년도', '월', '일(의 주차)', '기사 키워드', '기사 제목', '댓글 키워드', '댓글', 'URL']) # index=['댓글'], 
